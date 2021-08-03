@@ -28,17 +28,6 @@ export class ApiService {
 
   // Get all students 2. sposób
 
-  private _refreshGetAllStudents$ = new Subject();
-
-  get getAllStudents(){
-    return this._refreshGetAllStudents$;
-  }
-
-  _refreshGetAllStudents(){
-    return this.http.get(`${this.endpoint}`)
-  }
-
-
   private user = new BehaviorSubject<string>('');
 
   castUser = this.user.asObservable();
