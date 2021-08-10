@@ -8,4 +8,12 @@ Wypisanie wszystkich studentów z bazy danych
 </ul>
 
 
-{{ komunikat.student_name }}
+<p>Dodanie nowego studenta do bazy</p>
+<div>Dodano do bazy uytkownika: {{ komunikat.student_name }}</div>
+
+<p>Wszyscy w bazie danych</p>
+
+<ul>
+  <li *ngFor="let student of wypisz">{{student._id}} {{student.student_name}}</li>
+  <li *ngFor="let student of summaryArray2">{{student._id}} {{student.student_name}}</li>
+</ul>

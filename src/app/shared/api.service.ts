@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { runInThisContext } from 'vm';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -28,12 +28,25 @@ export class ApiService {
 
   // Get all students 2. sposób
 
+  private _refreshGetAllStudents$ = new Subject();
+
+  get getAllStudents(){
+    return this._refreshGetAllStudents$;
+  }
+
+  _refreshGetAllStudents(){
+    return this.http.get(`${this.endpoint}`)
+  }
+
+
   private user = new BehaviorSubject<string>('');
+  private user2 = new Subject<string>();
+  ;
 
   castUser = this.user.asObservable();
-
+  castUser2 = this.user2.asObservable();
 
   getHim(zmienna:string){
-    this.user.next(zmienna)
+    this.user2.next(zmienna)
   }
 }
