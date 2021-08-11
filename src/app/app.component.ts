@@ -34,13 +34,11 @@ export class AppComponent {
   submitStudentForm() {
       this.studentApi.AddStudent(this.studentForm.value).subscribe(res => {
         this.ngZone.run(() => {
-          console.log('res',res)
+          console.log('wpisano do bazy: ',res)
           this.studentApi.getHim(res);
         })
       });
 
   }
-
-
 
 }

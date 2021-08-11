@@ -1,19 +1,14 @@
-<p>all-students works!</p>
-
-Wypisanie wszystkich studentów z bazy danych
-
+<h3>Wypisanie wszystkich studentów z bazy danych</h3>
 <ul>
   <li *ngFor="let student of wypisz">{{student._id}} {{student.student_name}}</li>
-
 </ul>
 
 
-<p>Dodanie nowego studenta do bazy</p>
-<div>Dodano do bazy uytkownika: {{ komunikat.student_name }}</div>
+<h3>Dodanie nowego studenta do bazy</h3>
+<span *ngIf="komunikat"> {{ komunikat.student_name }}</span>
 
-<p>Wszyscy w bazie danych</p>
-
+<h3>Wszyscy w bazie danych</h3>
 <ul>
   <li *ngFor="let student of wypisz">{{student._id}} {{student.student_name}}</li>
-  <li *ngFor="let student of summaryArray2">{{student._id}} {{student.student_name}}</li>
+  <li *ngFor="let student of summaryArray">{{student._id}} {{student.student_name}}</li>
 </ul>

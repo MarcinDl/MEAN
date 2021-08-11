@@ -20,7 +20,6 @@ export class ApiService {
     return this.http.post(API_URL, data)
   }
 
-
   // Get all students
   GetStudents() {
     return this.http.get(`${this.endpoint}`);
@@ -39,14 +38,11 @@ export class ApiService {
   }
 
 
-  private user = new BehaviorSubject<string>('');
-  private user2 = new Subject<string>();
-  ;
+  private user = new Subject<string>();
 
   castUser = this.user.asObservable();
-  castUser2 = this.user2.asObservable();
 
   getHim(zmienna:string){
-    this.user2.next(zmienna)
+    this.user.next(zmienna)
   }
 }

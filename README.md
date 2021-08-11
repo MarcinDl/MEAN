@@ -1,10 +1,8 @@
-Readme:
-
 Uruchomienie frontu (wejść w folder główny)
 
 * ng serve
 
-Uruchomienie backendu (wejść w folder backend)
+Uruchomienie backendu (wejść w folder o nazwie *backend*)
 
 * mongo
 * nodemon app.js
@@ -12,5 +10,5 @@ Uruchomienie backendu (wejść w folder backend)
 
 mongo
 
-nazwa bazy danych: moj_crud
-nazwa kolekcji: students
+* nazwa bazy danych: *moj_crud*
+* nazwa kolekcji: *students*
