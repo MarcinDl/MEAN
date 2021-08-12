@@ -1,4 +1,4 @@
-#CRUD
+# MEAN - CRUD
 
 Uruchomienie frontu (wejść w folder główny)
 
@@ -8,7 +8,6 @@ Uruchomienie backendu (wejść w folder o nazwie *backend*)
 
 * mongo
 * nodemon app.js
-
 
 mongo
 
